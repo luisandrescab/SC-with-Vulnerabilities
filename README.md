@@ -1,3 +1,5 @@
+Actividad encuentra vulnerabilidades
+
 En el Contract PrivateBank.sol encontramos 
 
 1 Una vulnerabilidad de reentrada ( Reentracy )
