@@ -1,4 +1,5 @@
 En el Contract PrivateBank.sol encontramos 
+
 1 Una vulnerabilidad de reentrada ( Reentracy )
 Basicamente en mi entender un contrato que tiene una determinada función es llamado por otro contrato externo llamando nuevamente a la función original antes  que la primera se ejecute. Por ejemplo en la misma línea de pensamiento en este caso tenemos un contrato (PrivateBank.sol) que tiene la función de Withdraw..me imagino un atacante que llama la función de Withdraw en el contrato y antes que finalice la transacción realiza otra llamada antes que se actualice el saldo del usuario. El atacante para realizar esto ejecuta su propio código. 
 Es el famoso drenacion de fondos que lo que hace en otras palabras es manipular el contrato original.
