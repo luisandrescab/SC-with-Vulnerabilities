@@ -7,7 +7,7 @@ Basicamente en mi entender un contrato que tiene una determinada función es lla
 Es el famoso drenacion de fondos que lo que hace en otras palabras es manipular el contrato original.
 Una posible solución seria actualizar el estado del contrato antes de hacer cualquier llamada externa
 Lo que pude investigar también existen guardianes que bloquean la reentrada (Reentrancyguard) el modificador de OppenZeppelin podría ayudar a mitigar esto.
-Siguiendo con la consigna en la línea 11 tenemos la función Withdraw. El atacante podría hacer que el msg.sender.call{value: balance} llame nuevamente la función Withdraw antes que el balances[msg.sender] = 0 se ejecute
+Siguiendo con la consigna en la línea 12 tenemos la función Withdraw. El atacante podría hacer que el msg.sender.call{value: balance} llame nuevamente la función Withdraw antes que el balances[msg.sender] = 0 se ejecute
 
 2 En el contrato podemos observar la función getuserbalance ( línea 27)que lo que hace es devolver el saldo de un usuario..en este caso esta declarado como publico  lo que implica que puede ser llamado por otros usuario o otros contratos. Si quiero que solo los usuarios puedan consultar sus propios saldos podemos declarar la función en privada o interna
 
